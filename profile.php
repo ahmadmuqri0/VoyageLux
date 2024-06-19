@@ -69,7 +69,7 @@ if(isset($_POST['insert']))
 
 <!--	Title
 	=========================================================-->
-<title>Real Estate PHP</title>
+<title>Voyage Lux</title>
 </head>
 <body>
 
@@ -151,7 +151,7 @@ if(isset($_POST['insert']))
 									while($row=mysqli_fetch_array($query))
 									{
 								?>
-                                <div class="user-info mt-md-50"> <img src="user/<?php echo $row['6'];?>" alt="userimage" width="200" height="300">
+                                <div class="user-info mt-md-50"> <img src="user/<?php echo $row['5'];?>" alt="userimage" width="200" height="300">
                                     <div class="mb-4 mt-3">
                                         
                                     </div>
@@ -160,7 +160,6 @@ if(isset($_POST['insert']))
                                         <div class="mb-1 text-capitalize"><b>Name:</b> <?php echo $row['1'];?></div>
                                         <div class="mb-1"><b>Email:</b> <?php echo $row['2'];?></div>
                                         <div class="mb-1"><b>Contact:</b> <?php echo $row['3'];?></div>
-										<div class="mb-1 text-capitalize"><b>Role:</b> <?php echo $row['5'];?></div>
                                     </div>
 									<?php } ?>
                                 </div>

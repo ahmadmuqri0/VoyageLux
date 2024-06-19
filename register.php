@@ -8,7 +8,6 @@ if(isset($_REQUEST['reg']))
 	$email=$_REQUEST['email'];
 	$phone=$_REQUEST['phone'];
 	$pass=$_REQUEST['pass'];
-	$utype=$_REQUEST['utype'];
 	
 	$uimage=$_FILES['uimage']['name'];
 	$temp_name1 = $_FILES['uimage']['tmp_name'];
@@ -28,7 +27,7 @@ if(isset($_REQUEST['reg']))
 		if(!empty($name) && !empty($email) && !empty($phone) && !empty($pass) && !empty($uimage))
 		{
 			
-			$sql="INSERT INTO user (uname,uemail,uphone,upass,utype,uimage) VALUES ('$name','$email','$phone','$pass','$utype','$uimage')";
+			$sql="INSERT INTO user (uname,uemail,uphone,upass,uimage) VALUES ('$name','$email','$phone','$pass','$uimage')";
 			$result=mysqli_query($con, $sql);
 			if(move_uploaded_file($temp_name1,"user/$uimage"))
 			{
@@ -83,7 +82,7 @@ if(isset($_REQUEST['reg']))
 
 <!--	Title
 	=========================================================-->
-<title>Real Estate PHP</title>
+<title>Voyage Lux</title>
 </head>
 <body>
 
@@ -145,27 +144,11 @@ if(isset($_REQUEST['reg']))
 										<input type="email"  name="email" class="form-control" placeholder="Your Email*">
 									</div>
 									<div class="form-group">
-										<input type="text"  name="phone" class="form-control" placeholder="Your Phone*" maxlength="10">
+										<input type="text"  name="phone" class="form-control" placeholder="Your Phone*" maxlength="14">
 									</div>
 									<div class="form-group">
 										<input type="password" name="pass"  class="form-control" placeholder="Your Password*">
 									</div>
-
-									 <div class="form-check-inline">
-									  <label class="form-check-label">
-										<input type="radio" class="form-check-input" name="utype" value="user" checked>User
-									  </label>
-									</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
-									<div class="form-check-inline">
-									  <label class="form-check-label">
-										<input type="radio" class="form-check-input" name="utype" value="agent">Agent
-									  </label>
-									</div>
-									<div class="form-check-inline disabled">
-									  <label class="form-check-label">
-										<input type="radio" class="form-check-input" name="utype" value="builder">Builder
-									  </label>
-									</div> 
 									
 									<div class="form-group">
 										<label class="col-form-label"><b>User Image</b></label>

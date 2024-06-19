@@ -40,7 +40,7 @@ include("config.php");
 
 <!--	Title
 	=========================================================-->
-<title>Real Estate PHP</title>
+<title>Voyage Lux</title>
 </head>
 <body>
 
@@ -67,13 +67,13 @@ include("config.php");
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b>Property Detail</b></h2>
+                        <h2 class="page-name float-left text-white text-uppercase mt-1 mb-0"><b>Homestay Detail</b></h2>
                     </div>
                     <div class="col-md-6">
                         <nav aria-label="breadcrumb" class="float-left float-md-right">
                             <ol class="breadcrumb bg-transparent m-0 p-0">
                                 <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Property Detail</li>
+                                <li class="breadcrumb-item active">Homestay Detail</li>
                             </ol>
                         </nav>
                     </div>
@@ -89,53 +89,52 @@ include("config.php");
 				
 					<?php
 						$id=$_REQUEST['pid']; 
-						$query=mysqli_query($con,"SELECT property.*, user.* FROM `property`,`user` WHERE property.uid=user.uid and pid='$id'");
+						$query=mysqli_query($con,"SELECT homestay.*, user.* FROM `homestay`,`user` WHERE homestay.uid=user.uid and pid='$id'");
 						while($row=mysqli_fetch_array($query))
 						{
 					  ?>
 				  
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
 
                         <div class="row">
                             <div class="col-md-12">
                                 <div id="single-property" style="width:1200px; height:700px; margin:30px auto 50px;"> 
                                     <!-- Slide 1-->
-                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="property/<?php echo $row['18'];?>" class="ls-bg" alt="" /> </div>
+                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="homestay/<?php echo $row['17'];?>" class="ls-bg" alt="" /> </div>
                                     
                                     <!-- Slide 2-->
-                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="property/<?php echo $row['19'];?>" class="ls-bg" alt="" /> </div>
+                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="homestay/<?php echo $row['18'];?>" class="ls-bg" alt="" /> </div>
                                     
                                     <!-- Slide 3-->
-                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="property/<?php echo $row['20'];?>" class="ls-bg" alt="" /> </div>
+                                    <div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="homestay/<?php echo $row['19'];?>" class="ls-bg" alt="" /> </div>
 									
 									<!-- Slide 4-->
-									<div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="property/<?php echo $row['21'];?>" class="ls-bg" alt="" /> </div>
+									<div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="homestay/<?php echo $row['20'];?>" class="ls-bg" alt="" /> </div>
 									
 									<!-- Slide 5-->
-									<div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="property/<?php echo $row['22'];?>" class="ls-bg" alt="" /> </div>
+									<div class="ls-slide" data-ls="duration:7500; transition2d:5; kenburnszoom:in; kenburnsscale:1.2;"> <img width="1920" height="1080" src="homestay/<?php echo $row['21'];?>" class="ls-bg" alt="" /> </div>
                                 </div>
                             </div>
                         </div><!-- FOR MORE PROJECTS visit: codeastro.com -->
                         <div class="row mb-4">
                             <div class="col-md-6">
-                                <div class="bg-success d-table px-3 py-2 rounded text-white text-capitalize">For <?php echo $row['5'];?></div>
                                 <h5 class="mt-2 text-secondary text-capitalize"><?php echo $row['1'];?></h5>
-                                <span class="mb-sm-20 d-block text-capitalize"><i class="fas fa-map-marker-alt text-success font-12"></i> &nbsp;<?php echo $row['14'];?></span>
+                                <span class="mb-sm-20 d-block text-capitalize"><i class="fas fa-map-marker-alt text-success font-12"></i> &nbsp;<?php echo $row['13'];?></span>
 							</div>
                             <div class="col-md-6">
-                                <div class="text-success text-left h5 my-2 text-md-right">$<?php echo $row['13'];?></div>
+                                <div class="text-success text-left h5 my-2 text-md-right">$<?php echo $row['12'];?></div>
                                 <div class="text-left text-md-right">Price</div>
                             </div>
                         </div>
                         <div class="property-details">
                             <div class="bg-gray property-quantity px-4 pt-4 w-100">
                                 <ul>
-                                    <li><span class="text-secondary"><?php echo $row['12'];?></span> Sqft</li>
-                                    <li><span class="text-secondary"><?php echo $row['6'];?></span> Bedroom</li>
-                                    <li><span class="text-secondary"><?php echo $row['7'];?></span> Bathroom</li>
-                                    <li><span class="text-secondary"><?php echo $row['8'];?></span> Balcony</li>
-                                    <li><span class="text-secondary"><?php echo $row['10'];?></span> Hall</li>
-                                    <li><span class="text-secondary"><?php echo $row['9'];?></span> Kitchen</li>
+                                    <li><span class="text-secondary"><?php echo $row['11'];?></span> Sqft</li>
+                                    <li><span class="text-secondary"><?php echo $row['5'];?></span> Bedroom</li>
+                                    <li><span class="text-secondary"><?php echo $row['6'];?></span> Bathroom</li>
+                                    <li><span class="text-secondary"><?php echo $row['7'];?></span> Balcony</li>
+                                    <li><span class="text-secondary"><?php echo $row['9'];?></span> Hall</li>
+                                    <li><span class="text-secondary"><?php echo $row['8'];?></span> Kitchen</li>
                                 </ul>
                             </div>
                             <h4 class="text-secondary my-4">Description</h4>
@@ -153,15 +152,15 @@ include("config.php");
                                         </tr>
                                         <tr>
                                             <td>Floor :</td>
-                                            <td class="text-capitalize"><?php echo $row['11'];?></td>
+                                            <td class="text-capitalize"><?php echo $row['10'];?></td>
                                             <td>Total Floor :</td>
-                                            <td class="text-capitalize"><?php echo $row['28'];?></td>
+                                            <td class="text-capitalize"><?php echo $row['27'];?></td>
                                         </tr>
                                         <tr>
                                             <td>City :</td>
-                                            <td class="text-capitalize"><?php echo $row['15'];?></td>
+                                            <td class="text-capitalize"><?php echo $row['14'];?></td>
                                             <td>State :</td>
-                                            <td class="text-capitalize"><?php echo $row['16'];?></td>
+                                            <td class="text-capitalize"><?php echo $row['15'];?></td>
                                         </tr>
                                         
                                     </tbody>
@@ -169,7 +168,7 @@ include("config.php");
                             </div>
                             <h5 class="mt-5 mb-4 text-secondary">Features</h5>
                             <div class="row">
-								<?php echo $row['17'];?>
+								<?php echo $row['16'];?>
 								
                             </div>   
 							<!-- FOR MORE PROJECTS visit: codeastro.com -->
@@ -177,16 +176,16 @@ include("config.php");
                             <div class="accordion" id="accordionExample">
                                 <button class="bg-gray hover-bg-success hover-text-white text-ordinary py-3 px-4 mb-1 w-100 text-left rounded position-relative" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Floor Plans </button>
                                 <div id="collapseOne" class="collapse show p-4" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <img src="property/<?php echo $row['25'];?>" alt="Not Available"> </div>
+                                    <img src="homestay/<?php echo $row['24'];?>" alt="Not Available"> </div>
                                 <button class="bg-gray hover-bg-success hover-text-white text-ordinary py-3 px-4 mb-1 w-100 text-left rounded position-relative collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Basement Floor</button>
                                 <div id="collapseTwo" class="collapse p-4" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                    <img src="property/<?php echo $row['26'];?>" alt="Not Available"> </div>
+                                    <img src="homestay/<?php echo $row['25'];?>" alt="Not Available"> </div>
                                 <button class="bg-gray hover-bg-success hover-text-white text-ordinary py-3 px-4 mb-1 w-100 text-left rounded position-relative collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Ground Floor</button>
                                 <div id="collapseThree" class="collapse p-4" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                    <img src="property/<?php echo $row['27'];?>" alt="Not Available"> </div>
+                                    <img src="homestay/<?php echo $row['26'];?>" alt="Not Available"> </div>
                             </div>
 
-                            <h5 class="mt-5 mb-4 text-secondary double-down-line-left position-relative">Contact Agent</h5>
+                            <h5 class="mt-5 mb-4 text-secondary double-down-line-left position-relative">Contact Owner</h5>
                             <div class="agent-contact pt-60">
                                 <div class="row">
                                     <div class="col-sm-4 col-lg-3"> <img src="user/<?php echo $row['uimage']; ?>" alt="" height="200" width="170"> </div>
@@ -216,100 +215,6 @@ include("config.php");
                     </div>
 					
 					<?php } ?>
-					
-                    <div class="col-lg-4">
-                        <!-- <h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4 mt-md-50">Send Message</h4>
-                        <form method="post" action="#">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter Phone">
-                                    </div>
-                                </div>
-								<div class="col-md-12">
-                                    <div class="form-group">
-										<textarea class="form-control" placeholder="Enter Message"></textarea>
-                                    </div>
-                                </div>
-								
-                                <div class="col-md-12">
-                                    <div class="form-group mt-4">
-                                        <button type="submit" class="btn btn-success w-100">Search Property</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form> -->
-                        <h4 class="double-down-line-left text-secondary position-relative pb-4 my-4">Instalment Calculator</h4>
-                        <form class="d-inline-block w-100" action="calc.php" method="post">
-                            <label class="sr-only">Property Amount</label>
-                            <div class="input-group mb-2 mr-sm-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">$</div>
-                                </div>
-                                <input type="text" class="form-control" name="amount" placeholder="Property Price">
-                            </div>
-                            <label class="sr-only">Month</label>
-                            <div class="input-group mb-2 mr-sm-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
-                                </div>
-                                <input type="text" class="form-control" name="month" placeholder="Duration Year">
-                            </div>
-                            <label class="sr-only">Interest Rate</label>
-                            <div class="input-group mb-2 mr-sm-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">%</div>
-                                </div>
-                                <input type="text" class="form-control" name="interest" placeholder="Interest Rate">
-                            </div>
-                            <button type="submit" value="submit" name="calc" class="btn btn-danger mt-4">Calclute Instalment</button>
-                        </form>
-                        <h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4 mt-5">Featured Property</h4>
-                        <ul class="property_list_widget">
-							
-                            <?php 
-                            $query=mysqli_query($con,"SELECT * FROM `property` WHERE isFeatured = 1 ORDER BY date DESC LIMIT 3");
-                                    while($row=mysqli_fetch_array($query))
-                                    {
-                            ?>
-                            <li> <img src="property/<?php echo $row['18'];?>" alt="pimage">
-                                <h6 class="text-secondary hover-text-success text-capitalize"><a href="propertydetail.php?pid=<?php echo $row['0'];?>"><?php echo $row['1'];?></a></h6>
-                                <span class="font-14"><i class="fas fa-map-marker-alt icon-success icon-small"></i> <?php echo $row['14'];?></span>
-                                
-                            </li>
-                            <?php } ?>
-
-                        </ul>
-
-                        <div class="sidebar-widget mt-5">
-                            <h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4">Recently Added Property</h4>
-                            <ul class="property_list_widget">
-							
-								<?php 
-								$query=mysqli_query($con,"SELECT * FROM `property` ORDER BY date DESC LIMIT 7");
-										while($row=mysqli_fetch_array($query))
-										{
-								?>
-                                <li> <img src="property/<?php echo $row['18'];?>" alt="pimage">
-                                    <h6 class="text-secondary hover-text-success text-capitalize"><a href="propertydetail.php?pid=<?php echo $row['0'];?>"><?php echo $row['1'];?></a></h6>
-                                    <span class="font-14"><i class="fas fa-map-marker-alt icon-success icon-small"></i> <?php echo $row['14'];?></span>
-                                    
-                                </li>
-                                <?php } ?>
-
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

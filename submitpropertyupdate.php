@@ -58,15 +58,15 @@ if(isset($_POST['add']))
 	$temp_name6 =$_FILES['fimage1']['tmp_name'];
 	$temp_name7 =$_FILES['fimage2']['tmp_name'];
 	
-	move_uploaded_file($temp_name,"property/$aimage");
-	move_uploaded_file($temp_name1,"property/$aimage1");
-	move_uploaded_file($temp_name2,"property/$aimage2");
-	move_uploaded_file($temp_name3,"property/$aimage3");
-	move_uploaded_file($temp_name4,"property/$aimage4");
+	move_uploaded_file($temp_name,"homestay/$aimage");
+	move_uploaded_file($temp_name1,"homestay/$aimage1");
+	move_uploaded_file($temp_name2,"homestay/$aimage2");
+	move_uploaded_file($temp_name3,"homestay/$aimage3");
+	move_uploaded_file($temp_name4,"homestay/$aimage4");
 	
-	move_uploaded_file($temp_name5,"property/$fimage");
-	move_uploaded_file($temp_name6,"property/$fimage1");
-	move_uploaded_file($temp_name7,"property/$fimage2");
+	move_uploaded_file($temp_name5,"homestay/$fimage");
+	move_uploaded_file($temp_name6,"homestay/$fimage1");
+	move_uploaded_file($temp_name7,"homestay/$fimage2");
 	
 	
 	$sql = "UPDATE property SET title= '{$title}', pcontent= '{$content}', type='{$ptype}', bhk='{$bhk}', stype='{$stype}',
@@ -121,7 +121,7 @@ if(isset($_POST['add']))
 
 <!--	Title
 	=========================================================-->
-<title>Real Estate PHP</title>
+<title>Voyage Lux</title>
 </head>
 <body>
 
@@ -374,21 +374,21 @@ if(isset($_POST['add']))
 													<label class="col-lg-3 col-form-label">Image</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="aimage" type="file" required="">
-														<img src="property/<?php echo $row['18'];?>" alt="pimage" height="150" width="180">
+														<img src="homestay/<?php echo $row['18'];?>" alt="pimage" height="150" width="180">
 													</div>
 												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Image 2</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="aimage2" type="file" required="">
-														<img src="property/<?php echo $row['20'];?>" alt="pimage" height="150" width="180">
+														<img src="homestay/<?php echo $row['20'];?>" alt="pimage" height="150" width="180">
 													</div>
 												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Image 4</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="aimage4" type="file" required="">
-														<img src="property/<?php echo $row['22'];?>" alt="pimage" height="150" width="180">
+														<img src="homestay/<?php echo $row['22'];?>" alt="pimage" height="150" width="180">
 													</div>
 												</div>
 												<div class="form-group row">
@@ -405,7 +405,7 @@ if(isset($_POST['add']))
 													<label class="col-lg-3 col-form-label">Basement Floor Plan Image</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="fimage1" type="file">
-														<img src="property/<?php echo $row['26'];?>" alt="pimage" height="150" width="180">
+														<img src="homestay/<?php echo $row['26'];?>" alt="pimage" height="150" width="180">
 													</div>
 												</div>
 											</div>
@@ -415,14 +415,14 @@ if(isset($_POST['add']))
 													<label class="col-lg-3 col-form-label">Image 1</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="aimage1" type="file" required="">
-														<img src="property/<?php echo $row['19'];?>" alt="pimage" height="150" width="180">
+														<img src="homestay/<?php echo $row['19'];?>" alt="pimage" height="150" width="180">
 													</div>
 												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">image 3</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="aimage3" type="file" required="">
-														<img src="property/<?php echo $row['21'];?>" alt="pimage" height="150" width="180">
+														<img src="homestay/<?php echo $row['21'];?>" alt="pimage" height="150" width="180">
 													</div>
 												</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
 												
@@ -430,14 +430,14 @@ if(isset($_POST['add']))
 													<label class="col-lg-3 col-form-label">Floor Plan Image</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="fimage" type="file">
-														<img src="property/<?php echo $row['25'];?>" alt="pimage" height="150" width="180">
+														<img src="homestay/<?php echo $row['25'];?>" alt="pimage" height="150" width="180">
 													</div>
 												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Ground Floor Plan Image</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="fimage2" type="file">
-														<img src="property/<?php echo $row['27'];?>" alt="pimage" height="150" width="180">
+														<img src="homestay/<?php echo $row['27'];?>" alt="pimage" height="150" width="180">
 													</div>
 												</div>
 											</div>

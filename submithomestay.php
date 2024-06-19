@@ -22,7 +22,6 @@ if(isset($_POST['add']))
 	$bed=$_POST['bed'];
 	$balc=$_POST['balc'];
 	$hall=$_POST['hall'];
-	$stype=$_POST['stype'];
 	$bath=$_POST['bath'];
 	$kitc=$_POST['kitc'];
 	$floor=$_POST['floor'];
@@ -59,28 +58,28 @@ if(isset($_POST['add']))
 	$temp_name6 =$_FILES['fimage1']['tmp_name'];
 	$temp_name7 =$_FILES['fimage2']['tmp_name'];
 	
-	move_uploaded_file($temp_name,"property/$aimage");
-	move_uploaded_file($temp_name1,"property/$aimage1");
-	move_uploaded_file($temp_name2,"property/$aimage2");
-	move_uploaded_file($temp_name3,"property/$aimage3");
-	move_uploaded_file($temp_name4,"property/$aimage4");
+	move_uploaded_file($temp_name,"homestay/$aimage");
+	move_uploaded_file($temp_name1,"homestay/$aimage1");
+	move_uploaded_file($temp_name2,"homestay/$aimage2");
+	move_uploaded_file($temp_name3,"homestay/$aimage3");
+	move_uploaded_file($temp_name4,"homestay/$aimage4");
 	
-	move_uploaded_file($temp_name5,"property/$fimage");
-	move_uploaded_file($temp_name6,"property/$fimage1");
-	move_uploaded_file($temp_name7,"property/$fimage2");
+	move_uploaded_file($temp_name5,"homestay/$fimage");
+	move_uploaded_file($temp_name6,"homestay/$fimage1");
+	move_uploaded_file($temp_name7,"homestay/$fimage2");
 	
-	$sql="insert into property (title,pcontent,type,bhk,stype,bedroom,bathroom,balcony,kitchen,hall,floor,size,price,location,city,state,feature,pimage,pimage1,pimage2,pimage3,pimage4,uid,status,mapimage,topmapimage,groundmapimage,totalfloor, isFeatured)
-	values('$title','$content','$ptype','$bhk','$stype','$bed','$bath','$balc','$kitc','$hall','$floor','$asize','$price',
+	$sql="insert into homestay (title,pcontent,type,bhk,bedroom,bathroom,balcony,kitchen,hall,floor,size,price,location,city,state,feature,pimage,pimage1,pimage2,pimage3,pimage4,uid,status,mapimage,topmapimage,groundmapimage,totalfloor, isFeatured)
+	values('$title','$content','$ptype','$bhk','$bed','$bath','$balc','$kitc','$hall','$floor','$asize','$price',
 	'$loc','$city','$state','$feature','$aimage','$aimage1','$aimage2','$aimage3','$aimage4','$uid','$status','$fimage','$fimage1','$fimage2','$totalfloor', '$isFeatured')";
 	$result=mysqli_query($con,$sql);
 	if($result)
 		{
-			$msg="<p class='alert alert-success'>Property Inserted Successfully</p>";
+			$msg="<p class='alert alert-success'>Homestay Inserted Successfully</p>";
 					
 		}
 		else
 		{
-			$error="<p class='alert alert-warning'>Property Not Inserted Some Error</p>";
+			$error="<p class='alert alert-warning'>Homestay Not Inserted Some Error</p>";
 		}
 }							
 ?>
@@ -117,7 +116,7 @@ if(isset($_POST['add']))
 <!-- FOR MORE PROJECTS visit: codeastro.com -->
 <!--	Title
 	=========================================================-->
-<title>Real Estate PHP</title>
+<title>Voyage Lux</title>
 </head>
 <body>
 
@@ -165,7 +164,7 @@ if(isset($_POST['add']))
             <div class="container">
                     <div class="row">
 						<div class="col-lg-12">
-							<h2 class="text-secondary double-down-line text-center">Submit Property</h2>
+							<h2 class="text-secondary double-down-line text-center">Submit Homestay</h2>
                         </div>
 					</div>
                     <div class="row p-5 bg-white">
@@ -193,7 +192,7 @@ if(isset($_POST['add']))
 											</div>
 											<div class="col-xl-6">
 												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Property Type</label>
+													<label class="col-lg-3 col-form-label">Homestay Type</label>
 													<div class="col-lg-9">
 														<select class="form-control" required name="ptype">
 															<option value="">Select Type</option>
@@ -206,16 +205,6 @@ if(isset($_POST['add']))
 														</select>
 													</div>
 												</div>
-												<div class="form-group row">
-													<label class="col-lg-3 col-form-label">Selling Type</label>
-													<div class="col-lg-9">
-														<select class="form-control" required name="stype">
-															<option value="">Select Status</option>
-															<option value="rent">Rent</option>
-															<option value="sale">Sale</option>
-														</select>
-													</div>
-												</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Bathroom</label>
 													<div class="col-lg-9">
@@ -465,10 +454,7 @@ if(isset($_POST['add']))
 												</div>
 											</div>
 										</div>
-
-										
-											<input type="submit" value="Submit Property" class="btn btn-info"name="add" style="margin-left:200px;">
-										
+											<input type="submit" value="Submit Homestay" class="btn btn-info"name="add" style="margin-left:200px;">
 								</div>
 								</form>
                     </div>            

@@ -62,7 +62,7 @@ if(isset($_REQUEST['login']))
 <!-- FOR MORE PROJECTS visit: codeastro.com -->
 <!--	Title
 	=========================================================-->
-<title>Real Estate PHP</title>
+<title>Voyage Lux</title>
 </head>
 <body>
 

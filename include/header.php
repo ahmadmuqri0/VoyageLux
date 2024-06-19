@@ -4,8 +4,8 @@
                     <div class="row">
                         <div class="col-md-8">
                             <ul class="top-contact list-text-white  d-table">
-                                <li><a href="#"><i class="fas fa-phone-alt text-success mr-1"></i>+1 243-765-4321</a></li>
-                                <li><a href="#"><i class="fas fa-envelope text-success mr-1"></i>codeastro@realestatest.com</a></li>
+                                <li><a href="#"><i class="fas fa-phone-alt text-success mr-1"></i>+60 11-1987-2543</a></li>
+                                <li><a href="#"><i class="fas fa-envelope text-success mr-1"></i>voyagelux@zen.com</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4">
@@ -39,10 +39,7 @@
 										
                                         <li class="nav-item"> <a class="nav-link" href="contact.php">Contact</a> </li>										
 										
-                                        <li class="nav-item"> <a class="nav-link" href="property.php">Properties</a> </li>
-                                        
-                                        <li class="nav-item"> <a class="nav-link" href="agent.php">Agent</a> </li>
-
+                                        <li class="nav-item"> <a class="nav-link" href="homestay.php">Homestays</a> </li>
 										
 										<?php  if(isset($_SESSION['uemail']))
 										{ ?>
@@ -50,8 +47,7 @@
 											<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
 											<ul class="dropdown-menu">
 												<li class="nav-item"> <a class="nav-link" href="profile.php">Profile</a> </li>
-												<!-- <li class="nav-item"> <a class="nav-link" href="request.php">Property Request</a> </li> -->
-												<li class="nav-item"> <a class="nav-link" href="feature.php">Your Property</a> </li>
+												<li class="nav-item"> <a class="nav-link" href="feature.php">Your Homestay</a> </li>
 												<li class="nav-item"> <a class="nav-link" href="logout.php">Logout</a> </li>	
 											</ul>
                                         </li>
@@ -62,7 +58,7 @@
                                     </ul>
                                     
 									
-									<a class="btn btn-success d-none d-xl-block" style="border-radius:30px;" href="submitproperty.php">Submit Peoperty</a> 
+									<a class="btn btn-success d-none d-xl-block" style="border-radius:30px;" href="submithomestay.php">Submit Homestay</a> 
                                 </div>
                             </nav>
                         </div>
