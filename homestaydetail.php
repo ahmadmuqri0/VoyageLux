@@ -1,4 +1,4 @@
-<?php 
+f<?php 
 ini_set('session.cache_limiter','public');
 session_cache_limiter(false);
 session_start();
@@ -122,7 +122,7 @@ include("config.php");
                                 <span class="mb-sm-20 d-block text-capitalize"><i class="fas fa-map-marker-alt text-success font-12"></i> &nbsp;<?php echo $row['13'];?></span>
 							</div>
                             <div class="col-md-6">
-                                <div class="text-success text-left h5 my-2 text-md-right">$<?php echo $row['12'];?></div>
+                                <div class="text-success text-left h5 my-2 text-md-right">RM <?php echo $row['12'];?></div>
                                 <div class="text-left text-md-right">Price</div>
                             </div>
                         </div>
@@ -154,7 +154,7 @@ include("config.php");
                                             <td>Floor :</td>
                                             <td class="text-capitalize"><?php echo $row['10'];?></td>
                                             <td>Total Floor :</td>
-                                            <td class="text-capitalize"><?php echo $row['27'];?></td>
+                                            <td class="text-capitalize"><?php echo $row['24'];?></td>
                                         </tr>
                                         <tr>
                                             <td>City :</td>
@@ -172,18 +172,8 @@ include("config.php");
 								
                             </div>   
 							<!-- FOR MORE PROJECTS visit: codeastro.com -->
-                            <h5 class="mt-5 mb-4 text-secondary">Floor Plans</h5>
-                            <div class="accordion" id="accordionExample">
-                                <button class="bg-gray hover-bg-success hover-text-white text-ordinary py-3 px-4 mb-1 w-100 text-left rounded position-relative" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Floor Plans </button>
-                                <div id="collapseOne" class="collapse show p-4" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <img src="homestay/<?php echo $row['24'];?>" alt="Not Available"> </div>
-                                <button class="bg-gray hover-bg-success hover-text-white text-ordinary py-3 px-4 mb-1 w-100 text-left rounded position-relative collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Basement Floor</button>
-                                <div id="collapseTwo" class="collapse p-4" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                    <img src="homestay/<?php echo $row['25'];?>" alt="Not Available"> </div>
-                                <button class="bg-gray hover-bg-success hover-text-white text-ordinary py-3 px-4 mb-1 w-100 text-left rounded position-relative collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Ground Floor</button>
-                                <div id="collapseThree" class="collapse p-4" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                    <img src="homestay/<?php echo $row['26'];?>" alt="Not Available"> </div>
-                            </div>
+
+                            <a class="btn btn-success d-none d-xl-block" style="border-radius:30px;" href="submitreservation.php?pid=<?php echo $row['0']; ?>">Make Reservation</a>
 
                             <h5 class="mt-5 mb-4 text-secondary double-down-line-left position-relative">Contact Owner</h5>
                             <div class="agent-contact pt-60">

@@ -97,7 +97,6 @@ include("config.php");
 							if(isset($_REQUEST['filter']))
 							{
 								$type=$_REQUEST['type'];
-								$stype=$_REQUEST['stype'];
 								$city=$_REQUEST['city'];
 								
 								$sql="SELECT homestay.*, user.uname FROM `homestay`,`user` WHERE homestay.uid=user.uid and type='{$type}' and city='{$city}'";
@@ -116,7 +115,7 @@ include("config.php");
                             <div class="col-md-6">
                                 <div class="featured-thumb hover-zoomer mb-4">
                                     <div class="overlay-black overflow-hidden position-relative"> <img src="homestay/<?php echo $row['17'];?>" alt="pimage">
-                                        <div class="price text-primary text-capitalize">$<?php echo $row['12'];?> <span class="text-white"><?php echo $row['11'];?> Sqft</span></div>
+                                        <div class="price text-primary text-capitalize">RM <?php echo $row['12'];?> <span class="text-white"><?php echo $row['11'];?> Sqft</span></div>
                                         
                                     </div>
                                     <div class="featured-thumb-data shadow-one">

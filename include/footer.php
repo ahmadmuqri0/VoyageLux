@@ -7,7 +7,7 @@
                                 <div class="col-md-12 col-lg-4">
                                     <div class="footer-widget mb-4">
                                         <div class="footer-logo mb-4"> <a href="#"><img class="logo-bottom" src="images/logo/logoVL1.png" alt="image" width="100" height="100"></a> </div>
-                                        <p class="pb-20 text-white">Risus commodo congue augue phasellus morbi hymenaeos ante tincidunt eu orci dictum bibendum lacus platea primis mi lacinia felis gravida natoque bibendum cubilia montes tristique et arcu blandit risus. Lobortis dignissim nam.</p>
+                                        <p class="pb-20 text-white">We strive to deliver satisfactory service to our user. Book Now! and find your dream homestay anytime and anywhere.</p>
 										
                                         </div>
                                 </div>
@@ -29,8 +29,8 @@
                                                 <h4 class="widget-title text-white double-down-line-left position-relative">Quick Links</h4>
                                                 <ul class="hover-text-primary">
                                                     <li><a href="about.php" class="text-white">About Us</a></li>
-                                                    <li><a href="#" class="text-white">Featured Homestay</a></li>
-                                                    <li><a href="#" class="text-white">Submit Homestay</a></li>
+                                                    <li><a href="homestay.php" class="text-white">Featured Homestay</a></li>
+                                                    <li><a href="submithomestay.php" class="text-white">Submit Homestay</a></li>
                                                 </ul>
                                             </div>
                                         </div>

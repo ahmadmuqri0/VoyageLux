@@ -78,7 +78,7 @@ include("config.php");
 		 <!-- FOR MORE PROJECTS visit: codeastro.com -->
         <!--	About Our Company -->
         <div class="full-row">
-            <div class="container">
+            <div class="container mb-3">
                 
 				
 				<?php 
@@ -98,8 +98,8 @@ include("config.php");
                             <?php echo $row['2'];?>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-5 mt-5">
-                        <div class="about-img"> <img src="upload/user<?php echo $row['3'];?>" alt="about image"> </div>
+                    <div class="col-md-12 col-lg-3">
+                        <div class="about-img"> <img src="upload/<?php echo $row['3'];?>" alt="about image"> </div>
                     </div>
                 </div>
 				
