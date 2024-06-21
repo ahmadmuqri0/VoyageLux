@@ -101,33 +101,7 @@ include("config.php");
         
         <!--	Text Block One
 		======================================================-->
-        <div class="full-row bg-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12"><!-- FOR MORE PROJECTS visit: codeastro.com -->
-                        <h2 class="text-secondary double-down-line text-center mb-5">What We Do</h2></div>
-                </div>
-                <div class="text-box-one">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s"> 
-								<i class="flaticon-for-rent text-success flat-medium" aria-hidden="true"></i>
-                                <h5 class="text-secondary hover-text-success py-3 m-0"><a href="#">Rental Service</a></h5>
-                                <p>This is a dummy text for filling out spaces. Just some random words...</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s"> 
-								<i class="flaticon-list text-success flat-medium" aria-hidden="true"></i>
-                                <h5 class="text-secondary hover-text-success py-3 m-0"><a href="#">Homestay Listing</a></h5>
-                                <p>This is a dummy text for filling out spaces. Just some random words...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-		<!-----  Our Services  ---->
+       
 		
         <!--	Recent Homestays  -->
         <div class="full-row">
@@ -158,7 +132,7 @@ include("config.php");
                                         <div class="featured-thumb hover-zoomer mb-4">
                                             <div class="overlay-black overflow-hidden position-relative"> <img src="homestay/<?php echo $row['17'];?>" alt="pimage">
                                                 <div class="featured bg-success text-white">New</div>
-                                                <div class="price text-primary"><b>$<?php echo $row['12'];?> </b><span class="text-white"><?php echo $row['11'];?> Sqft</span></div>
+                                                <div class="price text-primary"><b>RM <?php echo $row['12'];?> </b><span class="text-white"><?php echo $row['11'];?> Sqft</span></div>
                                             </div>
                                             <div class="featured-thumb-data shadow-one">
                                                 <div class="p-3">
