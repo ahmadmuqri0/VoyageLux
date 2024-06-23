@@ -2,11 +2,7 @@
 ini_set('session.cache_limiter','public');
 session_cache_limiter(false);
 session_start();
-include("config.php");
-if(!isset($_SESSION['uemail']))
-{
-	header("location:login.php");
-}								
+include("config.php");						
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +34,7 @@ if(!isset($_SESSION['uemail']))
 <link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/login.css">
+<link rel="stylesheet" href="css/popup.css">
 
 <!--	Title
 	=========================================================-->
@@ -99,12 +96,11 @@ if(!isset($_SESSION['uemail']))
 					<table class="items-list col-lg-12 table-hover" style="border-collapse:inherit;">
                         <thead>
                              <tr  class="bg-dark">
-                                <th class="text-white font-weight-bolder">Homestay</th>
-                                <th class="text-white font-weight-bolder">Number Of People</th>
-                                <th class="text-white font-weight-bolder">Check In</th>
-                                <th class="text-white font-weight-bolder">Check Out</th>
-                                <th class="text-white font-weight-bolder">Update</th>
-								<th class="text-white font-weight-bolder">Delete</th>
+                                <th class="text-white font-weight-bolder" style="text-align: center;">Homestay</th>
+                                <th class="text-white font-weight-bolder" style="text-align: center;">Number Of People</th>
+                                <th class="text-white font-weight-bolder" style="text-align: center;">Check In</th>
+                                <th class="text-white font-weight-bolder" style="text-align: center;">Check Out</th>
+                                <th class="text-white font-weight-bolder" style="text-align: center;">Option</th>
                              </tr>
                         </thead>
                         <tbody>
@@ -116,12 +112,17 @@ if(!isset($_SESSION['uemail']))
 								{
 							?>
                             <tr>
-                                <td><?php echo $row['6'];?></td>
-                                <td><?php echo $row['1'];?></td>
-                                <td><?php echo $row['2'];?></td>
-                                <td><?php echo $row['3'];?></td>
-                                <td><a class="btn btn-info" href="submitreservationupdate.php?id=<?php echo $row['0'];?>">Update</a></td>
-								<td><a class="btn btn-danger" href="submitreservationdelete.php?id=<?php echo $row['0'];?>">Delete</a></td>
+                                <td style="text-align: center;"><?php echo $row['6'];?></td>
+                                <td style="text-align: center;"><?php echo $row['1'];?></td>
+                                <td style="text-align: center;"><?php echo $row['2'];?></td>
+                                <td style="text-align: center;"><?php echo $row['3'];?></td>
+                                <td>
+                                    <div style="display: grid; gap: 1rem; grid-template-columns: 1fr 1fr 1fr;">
+                                        <a class="btn btn-info" href="submitreservationupdate.php?id=<?php echo $row['0'];?>">Edit</a>
+                                        <a class="btn btn-danger" href="submitreservationdelete.php?id=<?php echo $row['0'];?>">Cancel</a>
+                                        <button class="btn btn-success" id="payment">Make Payment</button>
+                                    </div>
+                                </td>
                             </tr>
 							<?php } ?>
 							<!-- FOR MORE PROJECTS visit: codeastro.com -->
@@ -130,8 +131,46 @@ if(!isset($_SESSION['uemail']))
             </div>
         </div>
 	<!--	Submit property   -->
-        
-        
+        <!-- The form -->
+        <?php 
+            $uid=$_SESSION['uid'];
+            $query=mysqli_query($con,"SELECT user.uname, homestay.title, homestay.price, reservation.*  FROM `user`, `homestay`, `reservation` WHERE user.uid='$uid' and reservation.uid='$uid' and homestay.pid=reservation.pid");
+            while($row=mysqli_fetch_array($query))
+            {
+                $check_in_date = new DateTime($row['5']);
+                $check_out_date = new DateTime($row['6']);
+                $interval = $check_in_date->diff($check_out_date);
+                $day_count = $interval->days;
+                
+        ?>
+        <div class="form-popup" id="myForm">
+            <form method="post" class="form-container" action="payment.php">
+                <h1>Payment</h1>
+                <label for="user">Name: <?php echo $row["0"]?></label>
+
+                <br>
+                <label for="homestay">Homestay: <?php echo $row["1"]?></label>
+                <input type="hidden" value="<?php echo $row["7"]?>" name="pid">
+
+                <br>
+                <input type="hidden" value="<?php echo $row["3"]?>" name="sid">
+
+                <label for="pax">Pax: <?php echo $row["4"]?></label>
+
+                <br>
+                <label for="checkin">Check In: <?php echo $row["5"]?></label>
+
+                <br>
+                <label for="checkout">Check Out: <?php echo $row["6"]?></label>
+
+                <?php $amount = ($row["4"] * 10) + ($row["2"] * $day_count); ?>
+                <label for="amount">Amount To Pay: RM <?php echo $amount?>.00</label>
+                <input type="hidden" value="<?php echo  $amount?>" name="amount">
+
+                <?php }?>
+                <input type="submit" class="btn" name="pay" value="Pay">
+            </form>
+        </div>
         <!--	Footer   start-->
 		<?php include("include/footer.php");?>
 		<!--	Footer   start-->
@@ -142,6 +181,8 @@ if(!isset($_SESSION['uemail']))
     </div>
 </div><!-- FOR MORE PROJECTS visit: codeastro.com -->
 <!-- Wrapper End --> 
+
+
 
 <!--	Js Link
 ============================================================--> 
@@ -160,5 +201,6 @@ if(!isset($_SESSION['uemail']))
 <script src="js/jquery.slider.js"></script> 
 <script src="js/wow.js"></script> 
 <script src="js/custom.js"></script>
+<script src="js/popup.js"></script>
 </body>
-</html>
+</html> 
