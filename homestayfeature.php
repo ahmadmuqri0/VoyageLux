@@ -99,12 +99,12 @@ if(!isset($_SESSION['uemail']))
 					<table class="items-list col-lg-12 table-hover" style="border-collapse:inherit;">
                         <thead>
                              <tr  class="bg-dark">
-                                <th class="text-white font-weight-bolder">Homestays</th>
-                                <th class="text-white font-weight-bolder">BHK</th>
-                                <th class="text-white font-weight-bolder">Added Date</th>
-								<th class="text-white font-weight-bolder">Status</th>
-                                <th class="text-white font-weight-bolder">Update</th>
-								<th class="text-white font-weight-bolder">Delete</th>
+                                <th class="text-white font-weight-bolder" style="text-align: center;">Homestays</th>
+                                <th class="text-white font-weight-bolder" style="text-align: center;">BHK</th>
+                                <th class="text-white font-weight-bolder" style="text-align: center;">Added Date</th>
+								<th class="text-white font-weight-bolder" style="text-align: center;">Status</th>
+                                <th class="text-white font-weight-bolder" style="text-align: center;">Update</th>
+								<th class="text-white font-weight-bolder" style="text-align: center;">Delete</th>
                              </tr>
                         </thead>
                         <tbody>
@@ -126,11 +126,11 @@ if(!isset($_SESSION['uemail']))
 										</div>
                                     </div>
 								</td>
-                                <td><?php echo $row['4'];?></td>
-                                <td><?php echo $row['25'];?></td>
+                                <td style="text-align: center;"><?php echo $row['4'];?></td>
+                                <td style="text-align: center;"><?php echo $row['25'];?></td>
 								<td class="text-capitalize"><?php echo $row['23'];?></td>
-                                <td><a class="btn btn-info" href="submithomestayupdate.php?id=<?php echo $row['0'];?>">Update</a></td>
-								<td><a class="btn btn-danger" href="submithomestaydelete.php?id=<?php echo $row['0'];?>">Delete</a></td>
+                                <td style="text-align: center;"><a class="btn btn-info" href="submithomestayupdate.php?id=<?php echo $row['0'];?>">Update</a></td>
+								<td style="text-align: center;"><a class="btn btn-danger" href="submithomestaydelete.php?id=<?php echo $row['0'];?>">Delete</a></td>
                             </tr>
 							<?php } ?>
 							<!-- FOR MORE PROJECTS visit: codeastro.com -->

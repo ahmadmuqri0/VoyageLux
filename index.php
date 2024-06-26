@@ -178,21 +178,14 @@ include("config.php");
 									<i class="flaticon-reward flat-medium float-left d-table mr-4 text-success" aria-hidden="true"></i>
 									<div class="pl-2">
 										<h5 class="mb-3">Top Rated</h5>
-										<p>This is a dummy text for filling out spaces. This is just a dummy text for filling out blank spaces.</p>
+										<p>Highly rated by our customer.</p>
 									</div>
                                 </li>
                                 <li class="mb-4 text-white d-flex"> 
 									<i class="flaticon-real-estate flat-medium float-left d-table mr-4 text-success" aria-hidden="true"></i>
 									<div class="pl-2">
 										<h5 class="mb-3">Experience Quality</h5>
-										<p>This is a dummy text for filling out spaces. This is just a dummy text for filling out blank spaces.</p>
-									</div>
-                                </li>
-                                <li class="mb-4 text-white d-flex"> 
-									<i class="flaticon-seller flat-medium float-left d-table mr-4 text-success" aria-hidden="true"></i>
-									<div class="pl-2">
-										<h5 class="mb-3">Experienced Agents</h5>
-										<p>This is a dummy text for filling out spaces. This is just a dummy text for filling out blank spaces.</p>
+										<p>Focus on providing the best service to our customer.</p>
 									</div>
                                 </li>
                             </ul>
@@ -216,24 +209,24 @@ include("config.php");
                         <div class="icon-thumb-one text-center mb-5">
                             <div class="bg-success text-white rounded-circle position-absolute z-index-9">1</div>
                             <div class="left-arrow"><i class="flaticon-investor flat-medium icon-success" aria-hidden="true"></i></div>
-                            <h5 class="text-secondary mt-5 mb-4">Discussion</h5>
-                            <p>Nascetur cubilia sociosqu aliquet ut elit nascetur nullam duis tincidunt nisl non quisque vestibulum platea ornare ridiculus.</p>
+                            <h5 class="text-secondary mt-5 mb-4">Search Homestay</h5>
+                            <p>Search your preferred homestay.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="icon-thumb-one text-center mb-5">
                             <div class="bg-success text-white rounded-circle position-absolute z-index-9">2</div>
                             <div class="left-arrow"><i class="flaticon-search flat-medium icon-success" aria-hidden="true"></i></div>
-                            <h5 class="text-secondary mt-5 mb-4">Files Review</h5>
-                            <p>Nascetur cubilia sociosqu aliquet ut elit nascetur nullam duis tincidunt nisl non quisque vestibulum platea ornare ridiculus.</p>
+                            <h5 class="text-secondary mt-5 mb-4">Check the details.</h5>
+                            <p>Check the homestay details and make sure it meets your needs</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="icon-thumb-one text-center mb-5">
                             <div class="bg-success text-white rounded-circle position-absolute z-index-9">3</div>
                             <div><i class="flaticon-handshake flat-medium icon-success" aria-hidden="true"></i></div>
-                            <h5 class="text-secondary mt-5 mb-4">Acquire</h5>
-                            <p>Nascetur cubilia sociosqu aliquet ut elit nascetur nullam duis tincidunt nisl non quisque vestibulum platea ornare ridiculus.</p>
+                            <h5 class="text-secondary mt-5 mb-4">Make Reservation</h5>
+                            <p>Enter your information about your reservation.</p>
                         </div>
                     </div>
                 </div>
@@ -269,7 +262,7 @@ include("config.php");
                             <div class="overflow-hidden position-relative overlay-secondary hover-zoomer mx-n13 z-index-9"> <img src="images/thumbnail4/2.jpg" alt="">
                                 <div class="text-white xy-center z-index-9 position-absolute text-center w-100">
 									<?php
-										$query=mysqli_query($con,"SELECT count(state), homestay.* FROM homestay where city='Johor Bharu'");
+										$query=mysqli_query($con,"SELECT count(state), homestay.* FROM homestay where city='Johor Bahru'");
 											while($row=mysqli_fetch_array($query))
 												{
 										?>
@@ -320,7 +313,7 @@ include("config.php");
 					<div class="col-lg-12">
 						<div class="content-sidebar p-4">
 							<div class="mb-3 col-lg-12">
-								<h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4">Testimonial</h4>
+								<h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4">Review</h4>
 									<div class="recent-review owl-carousel owl-dots-gray owl-dots-hover-success">
 									
 										<?php

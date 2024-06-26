@@ -26,12 +26,12 @@ if(isset($_POST['add']))
 	if($result)
     {
         $msg="<p class='alert alert-success'>Reservation Inserted Successfully</p>";
-                
     }
     else
     {
         $error="<p class='alert alert-warning'>Reservation Not Inserted Some Error</p>";
     }
+    header("Location:reservationfeature.php");
 }							
 ?>
 <!DOCTYPE html>

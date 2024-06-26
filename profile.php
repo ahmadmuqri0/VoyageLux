@@ -162,7 +162,7 @@ if(isset($_POST['insert']))
                                         <div class="mb-1"><b>Contact:</b> <?php echo $row['3'];?></div>
                                     </div>
                                     <br>
-                                    <input type="submit" class="btn btn-info mb-4" href="updateprofile.php?pid=<?php echo $row['0'];?>" name="insert" value="Update Info">
+                                    <a class="btn btn-info mb-4" href="profileupdate.php">Update Info</a>
 									<?php } ?>
                                 </div>
                             </div>
